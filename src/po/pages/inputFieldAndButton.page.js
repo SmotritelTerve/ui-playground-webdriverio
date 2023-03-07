@@ -20,18 +20,6 @@ class InputFieldAndButtonPage extends BasePage {
         await this.inputFieldAndButtonPageTitle.waitForDisplayed({ timeout: 100000 })
     }
 
-    async enterUserName(name) {
-        await this.usernameField.waitForDisplayed({ timeout: 100000 })
-        await this.usernameField.setValue(name)
-    }
-
-    async clickSubmitBtn() {
-        await this.submitBtn
-            .waitForDisplayed({ timeout: 100000 });
-        await this.submitBtn
-            .click();
-    }
-
     async getTextFromNameTextArea() {
         return await this.nameTextArea.getText()
     }

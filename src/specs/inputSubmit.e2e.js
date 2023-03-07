@@ -3,8 +3,9 @@ const MainMenuPage = require('../../src/po/components/mainMenu.page');
 const ElementsPage = require('../../src/po/pages/elements.page');
 const InputFieldAndButtonPage = require('../../src/po/pages/inputFieldAndButton.page.js');
 
-const name = "Alex";
-const textToVerify = `Your name is ${name}`;
+const { userName} = require('../../src/testData/formValues');
+
+const textToVerify = `Your name is ${userName}`;
 const promptMessage = "Please, enter your name";
 
 describe('Input field and Button page', () => {
@@ -15,8 +16,8 @@ describe('Input field and Button page', () => {
     await ElementsPage.clickInputFieldAndButtonLink();
     await expect(browser).toHaveTitle('UI Playground: Input field and Button');
 
-    await InputFieldAndButtonPage.enterUserName(name);
-    await InputFieldAndButtonPage.clickSubmitBtn();
+    await InputFieldAndButtonPage.usernameField.setValue(userName);
+    await InputFieldAndButtonPage.submitBtn.click();
     await expect(InputFieldAndButtonPage.nameTextArea).toHaveTextContaining(
       textToVerify)
   });
