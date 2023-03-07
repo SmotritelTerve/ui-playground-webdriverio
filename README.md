@@ -10,3 +10,4 @@ npx wdio run src/configs/wdio.conf.js --mochaOpts.grep Smoke
 ```
 npx wdio run src/configs/wdio.conf.js --spec src/specs/inputSubmit.e2e.js
 ```
+3. Use ``--headless`` option enabled in wdio.conf.js when you run the whole regression test suite

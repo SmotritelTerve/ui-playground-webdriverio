@@ -24,7 +24,7 @@ describe('Input field and Button page', () => {
 
   it('should check prompt when no name was entered', async () => {
     await InputFieldAndButtonPage.usernameField.clearValue();
-    await InputFieldAndButtonPage.clickSubmitBtn();
+    await InputFieldAndButtonPage.submitBtn.click();
     await expect(InputFieldAndButtonPage.nameTextArea).toHaveTextContaining(
       promptMessage)
   })
