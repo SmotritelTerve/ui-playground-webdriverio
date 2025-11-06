@@ -57,7 +57,6 @@ exports.config = {
       maxInstances: 1,
       //
       browserName: 'chrome',
-      browserName: 'chrome',
       pageLoadStrategy: 'none', // 'eager' or 'none',b
       acceptInsecureCerts: true,
       'goog:chromeOptions': {
