@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "wdio run src/configs/wdio.conf.js",
     "wdio": "wdio run src/configs/wdio.conf.js",
     "wdio:smoke": "wdio run src/configs/wdio.conf.js --mochaOpts.grep Smoke",
     "wdio:wip": "wdio run src/configs/wdio.conf.js --mochaOpts.grep WIP"
@@ -18,7 +18,7 @@
     "@wdio/mocha-framework": "^8.4.0",
     "@wdio/spec-reporter": "^8.4.0",
     "chai": "^4.3.7",
-    "chromedriver": "^110.0.0",
+    "chromedriver": "^140.0.4",
     "wdio-chromedriver-service": "^8.1.1"
   }
 }
